@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="3.0" xmlns="https://jakarta.ee/xml/ns/persistence" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+	<persistence-unit name="pizzeria-api">
+		<class>proyecto.sistema.venta.pizzeria_api.entities.ArqueoCaja</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Barrio</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.CajaAperturaCierre</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Caja</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Cargo</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Categoria</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Ciudad</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Compra</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.CompraDetalle</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.CompraDetallePK</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Contrato</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.ContratoPK</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Denominacion</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Deposito</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.DetalleArqueo</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.DetalleArqueoPK</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Documento</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Lote</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Marca</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Nacionalidad</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.OpDetalle</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.OpDetallePK</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.OrdenProduccion</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Pago</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Pais</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Persona</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Platillo</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Producto</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Proveedor</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Receta</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.RecetaPK</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Role</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Sabor</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Stock</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.StockPK</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Sucursal</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Tamano</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Timbrado</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.TipoContrato</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.TipoDoumento</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.TipoPago</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.TipoTransaccion</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Transaccion</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.TransaccionPK</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.UnidadMedida</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Usuario</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.Venta</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.VentaDetalle</class>
+		<class>proyecto.sistema.venta.pizzeria_api.entities.VentaDetallePK</class>
+	</persistence-unit>
+</persistence>
