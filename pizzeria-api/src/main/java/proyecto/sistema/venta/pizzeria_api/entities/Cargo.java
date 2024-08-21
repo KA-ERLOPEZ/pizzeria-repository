@@ -17,9 +17,9 @@ public class Cargo implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="cargo_id")
-	private long cargoId;
+	private int cargoId;
 
-	@Column(name="cargo_enabled")
+	@Column(name="cargo_enabled", columnDefinition = "tinyint(1) default '1'")
 	private boolean cargoEnabled;
 
 	@Column(name="cargo_nombre")
@@ -28,11 +28,11 @@ public class Cargo implements Serializable {
 	public Cargo() {
 	}
 
-	public long getCargoId() {
+	public int getCargoId() {
 		return this.cargoId;
 	}
 
-	public void setCargoId(long cargoId) {
+	public void setCargoId(int cargoId) {
 		this.cargoId = cargoId;
 	}
 

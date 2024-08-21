@@ -18,7 +18,7 @@ public class Lote implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="lote_id")
-	private long loteId;
+	private int loteId;
 
 	@Column(name="lote_cantidad")
 	private double loteCantidad;
@@ -41,11 +41,11 @@ public class Lote implements Serializable {
 	public Lote() {
 	}
 
-	public long getLoteId() {
+	public int getLoteId() {
 		return this.loteId;
 	}
 
-	public void setLoteId(long loteId) {
+	public void setLoteId(int loteId) {
 		this.loteId = loteId;
 	}
 

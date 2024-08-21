@@ -19,31 +19,31 @@ public class Persona implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="per_id")
-	private long perId;
+	private int perId;
 
-	@Column(name="per_apellido")
+	@Column(name="per_apellido", nullable = false, length = 150)
 	private String perApellido;
 
-	@Column(name="per_direccion")
+	@Column(name="per_direccion", nullable = false, length = 150)
 	private String perDireccion;
 
-	@Column(name="per_email")
+	@Column(name="per_email", nullable = false, length = 150)
 	private String perEmail;
 
-	@Column(name="per_enabled")
+	@Column(name="per_enabled", columnDefinition = "tinyint(1) default '1'", nullable = false)
 	private boolean perEnabled;
 
 	@Temporal(TemporalType.DATE)
-	@Column(name="per_fec_nac")
+	@Column(name="per_fec_nac", nullable = false)
 	private Date perFecNac;
 
-	@Column(name="per_nombre")
+	@Column(name="per_nombre", nullable = false, length = 150)
 	private String perNombre;
 
-	@Column(name="per_nro_documento")
+	@Column(name="per_nro_documento", nullable = false, length = 30, unique = true)
 	private String perNroDocumento;
 
-	@Column(name="per_telefono")
+	@Column(name="per_telefono", nullable = false, length = 30)
 	private String perTelefono;
 
 	//bi-directional many-to-one association to Contrato
@@ -63,11 +63,11 @@ public class Persona implements Serializable {
 	public Persona() {
 	}
 
-	public long getPerId() {
+	public int getPerId() {
 		return this.perId;
 	}
 
-	public void setPerId(long perId) {
+	public void setPerId(int perId) {
 		this.perId = perId;
 	}
 

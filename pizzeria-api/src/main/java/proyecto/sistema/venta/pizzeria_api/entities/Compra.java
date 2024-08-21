@@ -19,7 +19,7 @@ public class Compra implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="compra_id")
-	private long compraId;
+	private int compraId;
 
 	@Column(name="compra_estado")
 	private String compraEstado;
@@ -65,11 +65,11 @@ public class Compra implements Serializable {
 	public Compra() {
 	}
 
-	public long getCompraId() {
+	public int getCompraId() {
 		return this.compraId;
 	}
 
-	public void setCompraId(long compraId) {
+	public void setCompraId(int compraId) {
 		this.compraId = compraId;
 	}
 

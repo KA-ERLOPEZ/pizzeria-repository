@@ -17,9 +17,9 @@ public class Marca implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="mar_id")
-	private long marId;
+	private int marId;
 
-	@Column(name="mar_enabled")
+	@Column(name="mar_enabled", columnDefinition = "tinyint(1) default '1'")
 	private boolean marEnabled;
 
 	@Column(name="mar_nombre")
@@ -28,11 +28,11 @@ public class Marca implements Serializable {
 	public Marca() {
 	}
 
-	public long getMarId() {
+	public int getMarId() {
 		return this.marId;
 	}
 
-	public void setMarId(long marId) {
+	public void setMarId(int marId) {
 		this.marId = marId;
 	}
 

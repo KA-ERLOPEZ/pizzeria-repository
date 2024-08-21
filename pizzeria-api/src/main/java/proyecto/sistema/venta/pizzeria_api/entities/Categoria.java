@@ -17,9 +17,9 @@ public class Categoria implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="cat_id")
-	private long catId;
+	private int catId;
 
-	@Column(name="cat_enabled")
+	@Column(name="cat_enabled", columnDefinition = "tinyint(1) default '1'")
 	private boolean catEnabled;
 
 	@Column(name="cat_nombre")
@@ -28,11 +28,11 @@ public class Categoria implements Serializable {
 	public Categoria() {
 	}
 
-	public long getCatId() {
+	public int getCatId() {
 		return this.catId;
 	}
 
-	public void setCatId(long catId) {
+	public void setCatId(int catId) {
 		this.catId = catId;
 	}
 

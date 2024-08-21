@@ -18,7 +18,7 @@ public class Caja implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="caja_id")
-	private long cajaId;
+	private int cajaId;
 
 	@Column(name="caja_estado")
 	private String cajaEstado;
@@ -38,11 +38,11 @@ public class Caja implements Serializable {
 	public Caja() {
 	}
 
-	public long getCajaId() {
+	public int getCajaId() {
 		return this.cajaId;
 	}
 
-	public void setCajaId(long cajaId) {
+	public void setCajaId(int cajaId) {
 		this.cajaId = cajaId;
 	}
 

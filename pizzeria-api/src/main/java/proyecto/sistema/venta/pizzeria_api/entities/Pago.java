@@ -19,7 +19,7 @@ public class Pago implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="pag_id")
-	private long pagId;
+	private int pagId;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name="pag_fecha")
@@ -28,7 +28,7 @@ public class Pago implements Serializable {
 	@Column(name="pag_monto")
 	private double pagMonto;
 
-	@Column(name="pag_enabled")
+	@Column(name="pag_enabled", columnDefinition = "tinyint(1) default '1'")
 	private boolean enabled;
 	
 	//uni-directional many-to-one association to TipoPago
@@ -50,11 +50,11 @@ public class Pago implements Serializable {
 	public Pago() {
 	}
 
-	public long getPagId() {
+	public int getPagId() {
 		return this.pagId;
 	}
 
-	public void setPagId(long pagId) {
+	public void setPagId(int pagId) {
 		this.pagId = pagId;
 	}
 

@@ -17,9 +17,9 @@ public class Timbrado implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="timbrado_id")
-	private long timbradoId;
+	private int timbradoId;
 
-	@Column(name="timbrado_enabled")
+	@Column(name="timbrado_enabled", columnDefinition = "tinyint(1) default '1'")
 	private boolean timbradoEnabled;
 
 	@Temporal(TemporalType.DATE)
@@ -36,11 +36,11 @@ public class Timbrado implements Serializable {
 	public Timbrado() {
 	}
 
-	public long getTimbradoId() {
+	public int getTimbradoId() {
 		return this.timbradoId;
 	}
 
-	public void setTimbradoId(long timbradoId) {
+	public void setTimbradoId(int timbradoId) {
 		this.timbradoId = timbradoId;
 	}
 

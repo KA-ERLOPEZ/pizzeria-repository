@@ -1,5 +1,6 @@
 package proyecto.sistema.venta.pizzeria_api.dto;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,9 +9,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor @NoArgsConstructor
 public class CargoDto {
 
-	private long cargoId;
+	private int cargoId;
 
-	private boolean cargoEnabled;
+	private boolean cargoEnabled=true;
 
+	@NotNull
 	private String cargoNombre;
 }

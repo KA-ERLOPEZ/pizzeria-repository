@@ -17,7 +17,7 @@ public class Sucursal implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="suc_id")
-	private long sucId;
+	private int sucId;
 
 	@Column(name="suc_direccion")
 	private String sucDireccion;
@@ -25,7 +25,7 @@ public class Sucursal implements Serializable {
 	@Column(name="suc_email")
 	private String sucEmail;
 
-	@Column(name="suc_estado")
+	@Column(name="suc_estado",columnDefinition = "tinyint(1) default '1'")
 	private boolean sucEstado;
 
 	@Column(name="suc_nombre")
@@ -37,11 +37,11 @@ public class Sucursal implements Serializable {
 	public Sucursal() {
 	}
 
-	public long getSucId() {
+	public int getSucId() {
 		return this.sucId;
 	}
 
-	public void setSucId(long sucId) {
+	public void setSucId(int sucId) {
 		this.sucId = sucId;
 	}
 

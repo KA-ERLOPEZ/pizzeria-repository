@@ -17,9 +17,9 @@ public class TipoPago implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="tp_id")
-	private long tpId;
+	private int tpId;
 
-	@Column(name="tp_enabled")
+	@Column(name="tp_enabled", columnDefinition = "tinyint(1) default '1'")
 	private boolean tpEnabled;
 
 	@Column(name="tp_nombre")
@@ -28,11 +28,11 @@ public class TipoPago implements Serializable {
 	public TipoPago() {
 	}
 
-	public long getTpId() {
+	public int getTpId() {
 		return this.tpId;
 	}
 
-	public void setTpId(long tpId) {
+	public void setTpId(int tpId) {
 		this.tpId = tpId;
 	}
 

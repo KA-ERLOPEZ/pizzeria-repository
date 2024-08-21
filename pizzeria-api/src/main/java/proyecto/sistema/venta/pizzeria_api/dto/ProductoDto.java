@@ -2,6 +2,7 @@ package proyecto.sistema.venta.pizzeria_api.dto;
 
 import java.util.List;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,20 +17,26 @@ import proyecto.sistema.venta.pizzeria_api.entities.Tamano;
 @AllArgsConstructor @NoArgsConstructor
 public class ProductoDto {
 	
-	private long prodId;
-
+	private int prodId;
+	
+	@NotNull
 	private String prodCodigo;
 
+	@NotNull
 	private String prodDescripcion;
 
-	private boolean prodEnabled;
+	private boolean prodEnabled = true;
 
+	@NotNull
 	private String prodNombre;
 
+	@NotNull
 	private double prodPrecioCompra;
 
+	@NotNull
 	private double prodPrecioVenta;
 
+	@NotNull
 	private String tipoProducto;
 
 	private Categoria categoria;

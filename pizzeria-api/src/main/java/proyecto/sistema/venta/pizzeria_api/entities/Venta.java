@@ -19,7 +19,7 @@ public class Venta implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="venta_id")
-	private long ventaId;
+	private int ventaId;
 
 	@Column(name="total_exentas")
 	private double totalExentas;
@@ -60,11 +60,11 @@ public class Venta implements Serializable {
 	public Venta() {
 	}
 
-	public long getVentaId() {
+	public int getVentaId() {
 		return this.ventaId;
 	}
 
-	public void setVentaId(long ventaId) {
+	public void setVentaId(int ventaId) {
 		this.ventaId = ventaId;
 	}
 

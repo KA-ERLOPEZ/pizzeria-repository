@@ -17,22 +17,22 @@ public class Role implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="role_id")
-	private long roleId;
+	private int roleId;
 
-	@Column(name="role_descripcion")
+	@Column(name="role_descripcion", nullable = false, length = 30, unique = true)
 	private String roleDescripcion;
 
-	@Column(name="role_enabled")
+	@Column(name="role_enabled",columnDefinition = "tinyint(1) default '1'")
 	private boolean roleEnabled;
 
 	public Role() {
 	}
 
-	public long getRoleId() {
+	public int getRoleId() {
 		return this.roleId;
 	}
 
-	public void setRoleId(long roleId) {
+	public void setRoleId(int roleId) {
 		this.roleId = roleId;
 	}
 

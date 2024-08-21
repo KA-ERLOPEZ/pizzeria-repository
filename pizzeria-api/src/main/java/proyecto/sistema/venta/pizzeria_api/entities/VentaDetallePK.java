@@ -15,41 +15,41 @@ public class VentaDetallePK implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Column(name="vd_id")
-	private long vdId;
+	private int vdId;
 
 	@Column(name="venta_id", insertable=false, updatable=false)
-	private long ventaId;
+	private int ventaId;
 
 	@Column(name="prod_id", insertable=false, updatable=false)
-	private long prodId;
+	private int prodId;
 
 	@Column(name="depo_id", insertable=false, updatable=false)
-	private long depoId;
+	private int depoId;
 
 	public VentaDetallePK() {
 	}
-	public long getVdId() {
+	public int getVdId() {
 		return this.vdId;
 	}
-	public void setVdId(long vdId) {
+	public void setVdId(int vdId) {
 		this.vdId = vdId;
 	}
-	public long getVentaId() {
+	public int getVentaId() {
 		return this.ventaId;
 	}
 	public void setVentaId(int ventaId) {
 		this.ventaId = ventaId;
 	}
-	public long getProdId() {
+	public int getProdId() {
 		return this.prodId;
 	}
-	public void setProdId(long prodId) {
+	public void setProdId(int prodId) {
 		this.prodId = prodId;
 	}
-	public long getDepoId() {
+	public int getDepoId() {
 		return this.depoId;
 	}
-	public void setDepoId(long depoId) {
+	public void setDepoId(int depoId) {
 		this.depoId = depoId;
 	}
 

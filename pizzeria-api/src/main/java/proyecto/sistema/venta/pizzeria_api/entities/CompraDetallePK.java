@@ -15,41 +15,41 @@ public class CompraDetallePK implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Column(name="cd_id")
-	private long cdId;
+	private int cdId;
 
 	@Column(name="prod_id", insertable=false, updatable=false)
-	private long prodId;
+	private int prodId;
 
 	@Column(name="depo_id", insertable=false, updatable=false)
-	private long depoId;
+	private int depoId;
 
 	@Column(name="compra_id", insertable=false, updatable=false)
-	private long compraId;
+	private int compraId;
 
 	public CompraDetallePK() {
 	}
-	public long getCdId() {
+	public int getCdId() {
 		return this.cdId;
 	}
-	public void setCdId(long cdId) {
+	public void setCdId(int cdId) {
 		this.cdId = cdId;
 	}
-	public long getProdId() {
+	public int getProdId() {
 		return this.prodId;
 	}
-	public void setProdId(long prodId) {
+	public void setProdId(int prodId) {
 		this.prodId = prodId;
 	}
-	public long getDepoId() {
+	public int getDepoId() {
 		return this.depoId;
 	}
-	public void setDepoId(long depoId) {
+	public void setDepoId(int depoId) {
 		this.depoId = depoId;
 	}
-	public long getCompraId() {
+	public int getCompraId() {
 		return this.compraId;
 	}
-	public void setCompraId(long compraId) {
+	public void setCompraId(int compraId) {
 		this.compraId = compraId;
 	}
 	@Override

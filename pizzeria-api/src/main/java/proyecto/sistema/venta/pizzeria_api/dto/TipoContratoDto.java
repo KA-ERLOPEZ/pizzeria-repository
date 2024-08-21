@@ -1,5 +1,6 @@
 package proyecto.sistema.venta.pizzeria_api.dto;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,11 +9,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor @NoArgsConstructor
 public class TipoContratoDto {
 
-	private long tcId;
+	private int tcId;
 
-	private boolean tcEnabled;
+	private boolean tcEnabled = true;
 
+	@NotNull
 	private String tcLeyNro;
 
+	@NotNull
 	private String tcNombre;
 }

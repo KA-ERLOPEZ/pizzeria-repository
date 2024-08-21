@@ -1,5 +1,6 @@
 package proyecto.sistema.venta.pizzeria_api.dto;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,13 +14,17 @@ public class TransaccionDto {
 
 	private TransaccionPK id;
 
+	@NotNull
 	private String tranDescripcion;
 
-	private byte tranEnabled;
+	private boolean tranEnabled = true;
 
+	@NotNull
 	private double tranMonto;
 
+	@NotNull
 	private CajaAperturaCierre cajaAperturaCierre;
 
-	private TipoTransaccion tipoTransaccione;
+	@NotNull
+	private TipoTransaccion tipoTransaccion;
 }

@@ -16,22 +16,22 @@ public class Tamano implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="tam_id")
-	private long tamId;
+	private int tamId;
 
 	@Column(name="tam_descripcion")
 	private String tamDescripcion;
 
-	@Column(name="tam_enabled")
+	@Column(name="tam_enabled",columnDefinition = "tinyint(1) default '1'")
 	private boolean tamEnabled;
 
 	public Tamano() {
 	}
 
-	public long getTamId() {
+	public int getTamId() {
 		return this.tamId;
 	}
 
-	public void setTamId(long tamId) {
+	public void setTamId(int tamId) {
 		this.tamId = tamId;
 	}
 

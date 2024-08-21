@@ -17,12 +17,12 @@ public class UnidadMedida implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="um_id")
-	private long umId;
+	private int umId;
 
 	@Column(name="um_abreviatura")
 	private String umAbreviatura;
 
-	@Column(name="um_enabled")
+	@Column(name="um_enabled", columnDefinition = "tinyint(1) default '1'")
 	private boolean umEnabled;
 
 	@Column(name="um_nombre")
@@ -31,11 +31,11 @@ public class UnidadMedida implements Serializable {
 	public UnidadMedida() {
 	}
 
-	public long getUmId() {
+	public int getUmId() {
 		return this.umId;
 	}
 
-	public void setUmId(long umId) {
+	public void setUmId(int umId) {
 		this.umId = umId;
 	}
 
@@ -47,7 +47,7 @@ public class UnidadMedida implements Serializable {
 		this.umAbreviatura = umAbreviatura;
 	}
 
-	public boolean getUmEnabled() {
+	public boolean isUmEnabled() {
 		return this.umEnabled;
 	}
 

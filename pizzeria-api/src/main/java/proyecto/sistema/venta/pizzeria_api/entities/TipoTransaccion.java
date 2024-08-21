@@ -18,9 +18,9 @@ public class TipoTransaccion implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="tran_tipo_id")
-	private long tranTipoId;
+	private int tranTipoId;
 
-	@Column(name="tran_tipo_enabled")
+	@Column(name="tran_tipo_enabled", columnDefinition = "tinyint(1) default '1'")
 	private boolean tranTipoEnabled;
 
 	@Column(name="tran_tipo_nombre")
@@ -33,7 +33,7 @@ public class TipoTransaccion implements Serializable {
 	public TipoTransaccion() {
 	}
 
-	public long getTranTipoId() {
+	public int getTranTipoId() {
 		return this.tranTipoId;
 	}
 

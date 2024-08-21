@@ -13,13 +13,13 @@ import proyecto.sistema.venta.pizzeria_api.entities.Venta;
 @AllArgsConstructor @NoArgsConstructor
 public class PagoDto {
 
-	private long pagId;
+	private int pagId;
 
 	private Timestamp pagFecha;
 
 	private double pagMonto;
 	
-	private boolean enabled;
+	private boolean enabled = true;
 
 	private TipoPago tipoPago;
 

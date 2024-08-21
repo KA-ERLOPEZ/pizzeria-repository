@@ -1,5 +1,6 @@
 package proyecto.sistema.venta.pizzeria_api.dto;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import proyecto.sistema.venta.pizzeria_api.entities.Stock;
@@ -13,17 +14,24 @@ public class VentaDetalleDto {
 
 	private VentaDetallePK id;
 
+	@NotNull
 	private double vdCantidad;
 
+	@NotNull
 	private double vdIvaMonto;
 
+	@NotNull
 	private double vdPrecio;
 
+	@NotNull
 	private double vdSubtotal;
 
+	@NotNull
 	private String vdTipoIva;
 	
+	@NotNull
 	private Stock stock;
 
+	@NotNull
 	private Venta venta;
 }

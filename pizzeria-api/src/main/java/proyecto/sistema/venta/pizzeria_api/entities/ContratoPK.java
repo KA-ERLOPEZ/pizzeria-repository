@@ -13,23 +13,23 @@ public class ContratoPK implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Column(name="tc_id", insertable=false, updatable=false)
-	private long tcId;
+	private int tcId;
 
 	@Column(name="per_id", insertable=false, updatable=false)
-	private long perId;
+	private int perId;
 
 	public ContratoPK() {
 	}
-	public long getTcId() {
+	public int getTcId() {
 		return this.tcId;
 	}
 	public void setTcId(int tcId) {
 		this.tcId = tcId;
 	}
-	public long getPerId() {
+	public int getPerId() {
 		return this.perId;
 	}
-	public void setPerId(long perId) {
+	public void setPerId(int perId) {
 		this.perId = perId;
 	}
 

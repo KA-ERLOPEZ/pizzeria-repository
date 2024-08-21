@@ -19,7 +19,7 @@ public class Sabor implements Serializable {
 	@Column(name="sab_id")
 	private int sabId;
 
-	@Column(name="sab_enabled")
+	@Column(name="sab_enabled", columnDefinition = "tinyint(1) default '1'")
 	private boolean sabEnabled;
 
 	@Column(name="sab_nombre")

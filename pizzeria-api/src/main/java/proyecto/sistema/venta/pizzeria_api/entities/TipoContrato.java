@@ -17,9 +17,9 @@ public class TipoContrato implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="tc_id")
-	private long tcId;
+	private int tcId;
 
-	@Column(name="tc_enabled")
+	@Column(name="tc_enabled", columnDefinition = "tinyint(1) default '1'")
 	private boolean tcEnabled;
 
 	@Column(name="tc_ley_nro")
@@ -31,11 +31,11 @@ public class TipoContrato implements Serializable {
 	public TipoContrato() {
 	}
 
-	public long getTcId() {
+	public int getTcId() {
 		return this.tcId;
 	}
 
-	public void setTcId(long tcId) {
+	public void setTcId(int tcId) {
 		this.tcId = tcId;
 	}
 

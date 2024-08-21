@@ -1,5 +1,6 @@
 package proyecto.sistema.venta.pizzeria_api.dto;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,11 +10,12 @@ import proyecto.sistema.venta.pizzeria_api.entities.Ciudad;
 @AllArgsConstructor @NoArgsConstructor
 public class BarrioDto {
 
-	private long barId;
+	private int barId;
 
-	private boolean barEnabled;
+	private boolean barEnabled= true;
 
+	@NotNull
 	private String barNombre;
 	
-	private Ciudad ciudade;
+	private Ciudad ciudad;
 }

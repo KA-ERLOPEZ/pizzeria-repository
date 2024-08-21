@@ -15,32 +15,32 @@ public class OpDetallePK implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Column(name="op_id", insertable=false, updatable=false)
-	private long opId;
+	private int opId;
 
 	@Column(name="prod_id", insertable=false, updatable=false)
-	private long prodId;
+	private int prodId;
 
 	@Column(name="depo_id", insertable=false, updatable=false)
-	private long depoId;
+	private int depoId;
 
 	public OpDetallePK() {
 	}
-	public long getOpId() {
+	public int getOpId() {
 		return this.opId;
 	}
 	public void setOpId(int opId) {
 		this.opId = opId;
 	}
-	public long getProdId() {
+	public int getProdId() {
 		return this.prodId;
 	}
 	public void setProdId(int prodId) {
 		this.prodId = prodId;
 	}
-	public long getDepoId() {
+	public int getDepoId() {
 		return this.depoId;
 	}
-	public void setDepoId(long depoId) {
+	public void setDepoId(int depoId) {
 		this.depoId = depoId;
 	}
 	

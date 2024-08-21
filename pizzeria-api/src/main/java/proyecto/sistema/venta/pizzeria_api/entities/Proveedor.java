@@ -10,14 +10,14 @@ import jakarta.persistence.*;
  */
 @Entity
 @Table(name="proveedores")
-@NamedQuery(name="Proveedore.findAll", query="SELECT p FROM Proveedore p")
+@NamedQuery(name="Proveedor.findAll", query="SELECT p FROM Proveedor p")
 public class Proveedor implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="prov_id")
-	private long provId;
+	private int provId;
 
 	@Column(name="prov_direccion")
 	private String provDireccion;
@@ -25,7 +25,7 @@ public class Proveedor implements Serializable {
 	@Column(name="prov_email")
 	private String provEmail;
 
-	@Column(name="prov_enabled")
+	@Column(name="prov_enabled", columnDefinition = "tinyint(1) default '1'")
 	private boolean provEnabled;
 
 	@Column(name="prov_pag_web")
@@ -47,11 +47,11 @@ public class Proveedor implements Serializable {
 	public Proveedor() {
 	}
 
-	public long getProvId() {
+	public int getProvId() {
 		return this.provId;
 	}
 
-	public void setProvId(long provId) {
+	public void setProvId(int provId) {
 		this.provId = provId;
 	}
 

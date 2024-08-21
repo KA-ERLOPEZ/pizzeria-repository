@@ -17,7 +17,7 @@ public class Denominacion implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="deno_id")
-	private long denoId;
+	private int denoId;
 
 	@Column(name="deno_codigo")
 	private String denoCodigo;
@@ -28,11 +28,11 @@ public class Denominacion implements Serializable {
 	public Denominacion() {
 	}
 
-	public long getDenoId() {
+	public int getDenoId() {
 		return this.denoId;
 	}
 
-	public void setDenoId(long denoId) {
+	public void setDenoId(int denoId) {
 		this.denoId = denoId;
 	}
 

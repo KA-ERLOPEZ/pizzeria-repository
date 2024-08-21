@@ -16,22 +16,22 @@ public class Nacionalidad implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="nac_id")
-	private long nacId;
+	private int nacId;
 
-	@Column(name="nac_enabled")
-	private boolean nacEnabled;
+	@Column(name="nac_enabled", nullable=false, columnDefinition = "tinyint(1) default '1'")
+	private boolean nacEnabled= true;
 
-	@Column(name="nac_nombre")
+	@Column(name="nac_nombre", length = 150, nullable = false)
 	private String nacNombre;
 
 	public Nacionalidad() {
 	}
 
-	public long getNacId() {
+	public int getNacId() {
 		return this.nacId;
 	}
 
-	public void setNacId(long nacId) {
+	public void setNacId(int nacId) {
 		this.nacId = nacId;
 	}
 

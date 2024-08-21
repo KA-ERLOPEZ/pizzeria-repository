@@ -18,9 +18,9 @@ public class Documento implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="documento_id")
-	private long documentoId;
+	private int documentoId;
 
-	@Column(name="documento_enabled")
+	@Column(name="documento_enabled", columnDefinition = "tinyint(1) default '1'")
 	private boolean documentoEnabled;
 
 	@Temporal(TemporalType.TIMESTAMP)
@@ -48,7 +48,7 @@ public class Documento implements Serializable {
 	public Documento() {
 	}
 
-	public long getDocumentoId() {
+	public int getDocumentoId() {
 		return this.documentoId;
 	}
 

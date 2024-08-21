@@ -19,7 +19,7 @@ public class ArqueoCaja implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="arqueo_id")
-	private long arqueoId;
+	private int arqueoId;
 
 	@Temporal(TemporalType.DATE)
 	@Column(name="arqueo_fecha")
@@ -58,11 +58,11 @@ public class ArqueoCaja implements Serializable {
 	public ArqueoCaja() {
 	}
 
-	public long getArqueoId() {
+	public int getArqueoId() {
 		return this.arqueoId;
 	}
 
-	public void setArqueoId(long arqueoId) {
+	public void setArqueoId(int arqueoId) {
 		this.arqueoId = arqueoId;
 	}
 

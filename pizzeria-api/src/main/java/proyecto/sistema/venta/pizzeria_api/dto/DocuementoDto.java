@@ -2,6 +2,7 @@ package proyecto.sistema.venta.pizzeria_api.dto;
 
 import java.util.Date;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,16 +14,20 @@ import proyecto.sistema.venta.pizzeria_api.entities.Venta;
 @AllArgsConstructor @NoArgsConstructor
 public class DocuementoDto {
 	
-	private long documentoId;
+	private int documentoId;
 
-	private boolean documentoEnabled;
+	private boolean documentoEnabled = true;
 
+	@NotNull
 	private Date documentoFecEmision;
 
+	@NotNull
 	private String documentoNro;
 
+	@NotNull
 	private Timbrado timbrado;
 
+	@NotNull
 	private TipoDoumento tipoDoumento;
 
 	private Venta ventaCabecera;

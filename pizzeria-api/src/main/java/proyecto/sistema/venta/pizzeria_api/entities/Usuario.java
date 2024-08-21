@@ -3,6 +3,7 @@ package proyecto.sistema.venta.pizzeria_api.entities;
 import java.io.Serializable;
 import jakarta.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 
@@ -19,23 +20,23 @@ public class Usuario implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="usu_id")
-	private long usuId;
+	private int usuId;
 
-	@Column(name="usu_enabled")
+	@Column(name="usu_enabled", columnDefinition = "tinyint(1) default '1'", nullable = false)
 	private boolean enabled;
 
 	@Temporal(TemporalType.DATE)
-	@Column(name="usu_fec_creacion")
+	@Column(name="usu_fec_creacion", nullable = false)
 	private Date usuFecCreacion;
 
-	@Column(name="usu_password")
+	@Column(name="usu_password", nullable = false)
 	private String usuPassword;
 
-	@Column(name="usu_username")
+	@Column(name="usu_username", nullable = false, length = 150, unique = true)
 	private String usuUsername;
 
 	//uni-directional many-to-many association to Role
-	@ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
 	@JoinTable(
 		name="usuario_rol"
 		, joinColumns={
@@ -45,21 +46,21 @@ public class Usuario implements Serializable {
 			@JoinColumn(name="role_id")
 			}
 		)
-	private Set<Role> roles;
+	private Set<Role> roles = new HashSet<>();
 
 	//uni-directional many-to-one association to Persona
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
 	@JoinColumn(name="per_id")
 	private Persona persona;
 
 	public Usuario() {
 	}
 
-	public long getUsuId() {
+	public int getUsuId() {
 		return this.usuId;
 	}
 
-	public void setUsuId(long usuId) {
+	public void setUsuId(int usuId) {
 		this.usuId = usuId;
 	}
 

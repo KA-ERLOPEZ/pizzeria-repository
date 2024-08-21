@@ -19,7 +19,7 @@ public class CajaAperturaCierre implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="cac_id")
-	private long id;
+	private int id;
 
 	@Temporal(TemporalType.DATE)
 	@Column(name="cac_fecha_apertura")
@@ -46,7 +46,7 @@ public class CajaAperturaCierre implements Serializable {
 	public CajaAperturaCierre() {
 	}
 
-	public long getId() {
+	public int getId() {
 		return this.id;
 	}
 

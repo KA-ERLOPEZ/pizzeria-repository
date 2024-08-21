@@ -20,7 +20,7 @@ public class Transaccion implements Serializable {
 	@Column(name="tran_descripcion")
 	private String tranDescripcion;
 
-	@Column(name="tran_enabled")
+	@Column(name="tran_enabled", columnDefinition = "tinyint(1)")
 	private byte tranEnabled;
 
 	@Column(name="tran_monto")

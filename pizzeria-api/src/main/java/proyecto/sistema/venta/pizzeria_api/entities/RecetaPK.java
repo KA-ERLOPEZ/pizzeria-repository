@@ -15,17 +15,17 @@ public class RecetaPK implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Column(name="platillo_id", insertable=false, updatable=false)
-	private long platilloId;
+	private int platilloId;
 
 	@Column(name="prod_id", insertable=false, updatable=false)
-	private long prodId;
+	private int prodId;
 
 	public RecetaPK() {
 	}
-	public long getPlatilloId() {
+	public int getPlatilloId() {
 		return this.platilloId;
 	}
-	public void setPlatilloId(long platilloId) {
+	public void setPlatilloId(int platilloId) {
 		this.platilloId = platilloId;
 	}
 	public long getProdId() {

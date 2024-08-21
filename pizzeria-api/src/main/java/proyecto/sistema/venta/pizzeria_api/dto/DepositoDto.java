@@ -1,5 +1,6 @@
 package proyecto.sistema.venta.pizzeria_api.dto;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,10 +10,11 @@ import proyecto.sistema.venta.pizzeria_api.entities.Sucursal;
 @AllArgsConstructor @NoArgsConstructor
 public class DepositoDto {
 
-	private long depoId;
+	private int depoId;
 	
-	private boolean depoEstado;
+	private boolean depoEstado = true;
 
+	@NotNull
 	private String depoNombre;
 
 	private Sucursal sucursal;

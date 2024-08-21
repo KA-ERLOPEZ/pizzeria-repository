@@ -17,9 +17,9 @@ public class Deposito implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="depo_id")
-	private long depoId;
+	private int depoId;
 
-	@Column(name="depo_estado")
+	@Column(name="depo_estado", columnDefinition = "tinyint(1) default '1'")
 	private boolean depoEstado;
 
 	@Column(name="depo_nombre")
@@ -33,11 +33,11 @@ public class Deposito implements Serializable {
 	public Deposito() {
 	}
 
-	public long getDepoId() {
+	public int getDepoId() {
 		return this.depoId;
 	}
 
-	public void setDepoId(long depoId) {
+	public void setDepoId(int depoId) {
 		this.depoId = depoId;
 	}
 

@@ -15,23 +15,23 @@ public class DetalleArqueoPK implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Column(name="arqueo_id", insertable=false, updatable=false)
-	private long arqueoId;
+	private int arqueoId;
 
 	@Column(name="deno_id", insertable=false, updatable=false)
-	private long denoId;
+	private int denoId;
 
 	public DetalleArqueoPK() {
 	}
-	public long getArqueoId() {
+	public int getArqueoId() {
 		return this.arqueoId;
 	}
-	public void setArqueoId(long arqueoId) {
+	public void setArqueoId(int arqueoId) {
 		this.arqueoId = arqueoId;
 	}
 	public long getDenoId() {
 		return this.denoId;
 	}
-	public void setDenoId(long denoId) {
+	public void setDenoId(int denoId) {
 		this.denoId = denoId;
 	}
 	@Override

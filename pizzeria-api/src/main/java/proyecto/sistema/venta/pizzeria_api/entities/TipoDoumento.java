@@ -17,22 +17,22 @@ public class TipoDoumento implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="tipodoc_id")
-	private long tipodocId;
+	private int tipodocId;
 
 	@Column(name="tipodoc_descripcion")
 	private String tipodocDescripcion;
 
-	@Column(name="tipodoc_estado")
+	@Column(name="tipodoc_estado", columnDefinition = "tinyint(1)")
 	private boolean tipodocEstado;
 
 	public TipoDoumento() {
 	}
 
-	public long getTipodocId() {
+	public int getTipodocId() {
 		return this.tipodocId;
 	}
 
-	public void setTipodocId(long tipodocId) {
+	public void setTipodocId(int tipodocId) {
 		this.tipodocId = tipodocId;
 	}
 

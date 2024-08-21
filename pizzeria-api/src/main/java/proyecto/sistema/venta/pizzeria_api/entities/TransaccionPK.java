@@ -15,20 +15,20 @@ public class TransaccionPK implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Column(name="cac_id", insertable=false, updatable=false)
-	private long cacId;
+	private int cacId;
 
 	@Column(name="tran_tipo_id", insertable=false, updatable=false)
-	private long tranTipoId;
+	private int tranTipoId;
 
 	public TransaccionPK() {
 	}
-	public long getCacId() {
+	public int getCacId() {
 		return this.cacId;
 	}
 	public void setCacId(int cacId) {
 		this.cacId = cacId;
 	}
-	public long getTranTipoId() {
+	public int getTranTipoId() {
 		return this.tranTipoId;
 	}
 	public void setTranTipoId(int tranTipoId) {

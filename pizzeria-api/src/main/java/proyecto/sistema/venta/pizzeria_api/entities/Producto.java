@@ -18,7 +18,7 @@ public class Producto implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="prod_id")
-	private long prodId;
+	private int prodId;
 
 	@Column(name="prod_codigo")
 	private String prodCodigo;
@@ -26,7 +26,7 @@ public class Producto implements Serializable {
 	@Column(name="prod_descripcion")
 	private String prodDescripcion;
 
-	@Column(name="prod_enabled")
+	@Column(name="prod_enabled", columnDefinition = "tinyint(1) default '1'")
 	private boolean prodEnabled;
 
 	@Column(name="prod_nombre")
@@ -76,11 +76,11 @@ public class Producto implements Serializable {
 	public Producto() {
 	}
 
-	public long getProdId() {
+	public int getProdId() {
 		return this.prodId;
 	}
 
-	public void setProdId(long prodId) {
+	public void setProdId(int prodId) {
 		this.prodId = prodId;
 	}
 

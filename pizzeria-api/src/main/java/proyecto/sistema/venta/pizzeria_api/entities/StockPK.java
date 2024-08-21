@@ -15,23 +15,23 @@ public class StockPK implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Column(name="prod_id", insertable=false, updatable=false)
-	private long prodId;
+	private int prodId;
 
 	@Column(name="depo_id", insertable=false, updatable=false)
-	private long depoId;
+	private int depoId;
 
 	public StockPK() {
 	}
-	public long getProdId() {
+	public int getProdId() {
 		return this.prodId;
 	}
-	public void setProdId(long prodId) {
+	public void setProdId(int prodId) {
 		this.prodId = prodId;
 	}
-	public long getDepoId() {
+	public int getDepoId() {
 		return this.depoId;
 	}
-	public void setDepoId(long depoId) {
+	public void setDepoId(int depoId) {
 		this.depoId = depoId;
 	}
 	@Override

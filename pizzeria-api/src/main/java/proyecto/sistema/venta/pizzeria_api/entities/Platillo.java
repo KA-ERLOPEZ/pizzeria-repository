@@ -18,7 +18,7 @@ public class Platillo implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="platillo_id")
-	private long platilloId;
+	private int platilloId;
 
 	@Column(name="platillo_descripcion")
 	private String platilloDescripcion;
@@ -29,7 +29,7 @@ public class Platillo implements Serializable {
 	@Column(name="platillo_nombre")
 	private String platilloNombre;
 	
-	@Column(name="platillo_enabled")
+	@Column(name="platillo_enabled", columnDefinition = "tinyint(1) default '1'")
 	private boolean enable;
 
 	//bi-directional many-to-one association to Receta
@@ -40,11 +40,11 @@ public class Platillo implements Serializable {
 	public Platillo() {
 	}
 
-	public long getPlatilloId() {
+	public int getPlatilloId() {
 		return this.platilloId;
 	}
 
-	public void setPlatilloId(long platilloId) {
+	public void setPlatilloId(int platilloId) {
 		this.platilloId = platilloId;
 	}
 

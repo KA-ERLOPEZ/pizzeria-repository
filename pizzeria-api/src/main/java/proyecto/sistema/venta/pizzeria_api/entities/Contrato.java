@@ -18,7 +18,7 @@ public class Contrato implements Serializable {
 	@EmbeddedId
 	private ContratoPK id;
 
-	@Column(name="cont_enabled")
+	@Column(name="cont_enabled", columnDefinition = "tinyint(1) default '1'")
 	private boolean contEnabled;
 
 	@Temporal(TemporalType.DATE)
